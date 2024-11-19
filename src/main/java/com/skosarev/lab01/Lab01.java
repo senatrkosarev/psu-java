@@ -12,7 +12,7 @@ public class Lab01 {
         }
 
         private double fraction(double x) {
-            return x - (int) x;
+            return x % 1;
         }
 
         public void task3() {
@@ -31,7 +31,7 @@ public class Lab01 {
         }
 
         public boolean is2Digits(int x) {
-            return String.valueOf(x).length() == 2;
+            return (10 <= x && x < 100) || (-100 < x && x <= -10);
         }
 
         public void task7() {
@@ -149,7 +149,7 @@ public class Lab01 {
 
     public static class Part3 implements OddTasksTo10Interface {
         public void task1() {
-            int num = ConsoleUtil.readInteger();
+            int num = ConsoleUtil.readInteger(0, Integer.MAX_VALUE);
             System.out.println("Результат: " + listNums(num));
         }
 
@@ -162,7 +162,7 @@ public class Lab01 {
         }
 
         public void task3() {
-            int num = ConsoleUtil.readInteger();
+            int num = ConsoleUtil.readInteger(0, Integer.MAX_VALUE);
             System.out.println("Результат: " + chet(num));
         }
 
@@ -240,14 +240,14 @@ public class Lab01 {
 
         public void task3() {
             int[] arr = ConsoleUtil.readIntArray(Integer.MIN_VALUE, Integer.MAX_VALUE);
-            System.out.println("Максимальное число: " + maxAbs(arr));
+            System.out.println("Результат: " + maxAbs(arr));
         }
 
         private int maxAbs(int[] arr) {
             int max = 0;
             for (int num : arr) {
-                if (Math.abs(num) > max) {
-                    max = Math.abs(num);
+                if (Math.abs(num) > Math.abs(max)) {
+                    max = num;
                 }
             }
             return max;

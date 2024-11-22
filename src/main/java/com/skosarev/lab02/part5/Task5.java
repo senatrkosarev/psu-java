@@ -1,14 +1,20 @@
 package com.skosarev.lab02.part5;
 
+import com.skosarev.common.ConsoleUtil;
 import com.skosarev.common.interfaces.RunnableTask;
 
 public class Task5 implements RunnableTask {
 
     @Override
     public void run() {
-        Fraction f1 = new Fraction(1, 3);
-        Fraction f2 = new Fraction(2, 3);
-        Fraction f3 = new Fraction(2, 9);
+        /*
+        1 3
+        2 3
+        2 9
+         */
+        Fraction f1 = new Fraction(ConsoleUtil.readInteger("Введи числитель 1 дроби: "), ConsoleUtil.readInteger("Введи знаменатель 1 дроби: "));
+        Fraction f2 = new Fraction(ConsoleUtil.readInteger("Введи числитель 2 дроби: "), ConsoleUtil.readInteger("Введи знаменатель 2 дроби: "));
+        Fraction f3 = new Fraction(ConsoleUtil.readInteger("Введи числитель 3 дроби: "), ConsoleUtil.readInteger("Введи знаменатель 3 дроби: "));
 
         System.out.printf("%s + %s = %s%n", f1, f2, f1.plus(f2));
         System.out.printf("%s - %s = %s%n", f1, f3, f1.minus(f3));

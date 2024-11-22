@@ -136,4 +136,24 @@ public class ConsoleUtil {
         }
         return arr;
     }
+
+    public static String readString(String message, boolean returnBlankInputAsNull) {
+        String result;
+        while (true) {
+            try {
+                System.out.print(message);
+                result = readLine();
+                if (result.isBlank()) {
+                    if (returnBlankInputAsNull) {
+                        return null;
+                    }
+                    throw new IllegalArgumentException("Введена пустая строка");
+                }
+
+                return result;
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
 }

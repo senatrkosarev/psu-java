@@ -1,5 +1,6 @@
 package com.skosarev.lab02.part1.task3;
 
+import com.skosarev.common.ConsoleUtil;
 import com.skosarev.common.interfaces.RunnableTask;
 
 import java.util.ArrayList;
@@ -9,9 +10,14 @@ public class Task3 implements RunnableTask {
     @Override
     public void run() {
         List<Name> names = new ArrayList<>();
-        names.add(new Name("Клеопатра", null, null));
-        names.add(new Name("Александр", "Пушкин", "Сергеевич"));
-        names.add(new Name("Владимир", "Маяковский", null));
+
+        for (int i = 0; i < 3; i++) {
+            String name = ConsoleUtil.readString("Имя %d: ".formatted(i + 1), true);
+            String surname = ConsoleUtil.readString("Фамилия %d: ".formatted(i + 1), true);
+            String patronymic = ConsoleUtil.readString("Отчество %d: ".formatted(i + 1), true);
+
+            names.add(new Name(name, surname, patronymic));
+        }
 
         names.forEach(System.out::println);
     }

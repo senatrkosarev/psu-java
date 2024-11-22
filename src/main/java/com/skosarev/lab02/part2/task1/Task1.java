@@ -1,5 +1,6 @@
 package com.skosarev.lab02.part2.task1;
 
+import com.skosarev.common.ConsoleUtil;
 import com.skosarev.common.interfaces.RunnableTask;
 import com.skosarev.lab02.part1.task1.Point;
 
@@ -8,20 +9,30 @@ import java.util.List;
 public class Task1 implements RunnableTask {
     @Override
     public void run() {
-        Line l1 = new Line(new Point(1, 3), new Point(23, 8));
-        Line l2 = new Line(new Point(5, 10), new Point(25, 10));
+        /*
+        1 3
+        23 8
+        5 10
+        25 10
+
+        0 0
+        1 1
+        100 100
+         */
+        Line l1 = new Line(readPoint(), readPoint());
+        Line l2 = new Line(readPoint(), readPoint());
         Line l3 = new Line(l1.getP1(), l2.getP2());
 
         printLines(l1, l2, l3);
 
-        l1.getP1().setX(0);
-        l1.getP1().setY(0);
-        l2.getP2().setX(1);
-        l2.getP2().setY(1);
+        l1.getP1().setX(ConsoleUtil.readLong("Введи новое значение X для точки 1 линии 1: "));
+        l1.getP1().setY(ConsoleUtil.readLong("Введи новое значение Y для точки 1 линии 1: "));
+        l2.getP2().setX(ConsoleUtil.readLong("Введи новое значение X для точки 2 линии 2: "));
+        l2.getP2().setY(ConsoleUtil.readLong("Введи новое значение Y для точки 2 линии 2: "));
 
         printLines(l1, l2, l3);
 
-        l1.setP2(new Point(100, 100));
+        l1.setP2(readPoint());
 
         printLines(l1, l2, l3);
     }
@@ -29,5 +40,11 @@ public class Task1 implements RunnableTask {
     public static void printLines(Line... points) {
         List.of(points).forEach(System.out::println);
         System.out.println();
+    }
+
+    public Point readPoint() {
+        long x = ConsoleUtil.readLong("Введи значение X: ");
+        long y = ConsoleUtil.readLong("Введи значение Y: ");
+        return new Point(x, y);
     }
 }

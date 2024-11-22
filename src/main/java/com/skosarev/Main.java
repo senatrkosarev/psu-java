@@ -1,10 +1,12 @@
 package com.skosarev;
 
-import com.skosarev.lab01.Lab01;
+import com.skosarev.common.interfaces.RunnableTask;
+import com.skosarev.lab02.part2.task1.Task1;
+import com.skosarev.lab02.part5.Task5;
 
 public class Main {
     public static void main(String[] args) {
-        Lab01.Part4 p1 = new Lab01.Part4();
-        p1.task9();
+        RunnableTask task = new Task5();
+        task.run();
     }
 }

@@ -19,6 +19,7 @@ public class Task3 implements RunnableTask {
             names.add(new Name(name, surname, patronymic));
         }
 
+        System.out.println("\nВсе имена: ");
         names.forEach(System.out::println);
     }
 }

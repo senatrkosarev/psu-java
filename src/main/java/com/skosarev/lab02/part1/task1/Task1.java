@@ -2,7 +2,7 @@ package com.skosarev.lab02.part1.task1;
 
 import com.skosarev.common.ConsoleUtil;
 
-public class Task1 implements RunnableTask {
+public class Task1 {
 
     private static final int POINT_NUMBER = 3;
 

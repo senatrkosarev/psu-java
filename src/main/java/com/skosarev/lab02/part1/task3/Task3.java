@@ -1,7 +1,6 @@
 package com.skosarev.lab02.part1.task3;
 
 import com.skosarev.common.ConsoleUtil;
-import com.skosarev.common.interfaces.RunnableTask;
 
 import java.util.ArrayList;
 import java.util.List;

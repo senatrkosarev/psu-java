@@ -1,7 +1,6 @@
 package com.skosarev.lab02.part5;
 
 import com.skosarev.common.ConsoleUtil;
-import com.skosarev.common.interfaces.RunnableTask;
 
 public class Task5 implements RunnableTask {
 

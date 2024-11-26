@@ -1,13 +1,10 @@
 package com.skosarev.lab04.part3.task1;
 
-import com.skosarev.common.interfaces.RunnableTask;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class Task1 implements RunnableTask {
+public class Task1 {
 
-    @Override
     public void run() {
         List<String> data1 = List.of("qwerty", "asdfg", "zx");
         List<Double> data2 = List.of(1D, -3.7);

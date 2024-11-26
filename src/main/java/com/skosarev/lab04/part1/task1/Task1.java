@@ -1,10 +1,9 @@
 package com.skosarev.lab04.part1.task1;
 
 import com.skosarev.common.ConsoleUtil;
-import com.skosarev.common.interfaces.RunnableTask;
 
-public class Task1 implements RunnableTask {
-    @Override
+public class Task1 {
+
     public void run() {
         int value = ConsoleUtil.readInteger();
         Box<Integer> box = new Box<>(value);

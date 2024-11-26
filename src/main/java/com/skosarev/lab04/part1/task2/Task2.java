@@ -1,10 +1,8 @@
 package com.skosarev.lab04.part1.task2;
 
 import com.skosarev.common.ConsoleUtil;
-import com.skosarev.common.interfaces.RunnableTask;
 
-public class Task2 implements RunnableTask {
-    @Override
+public class Task2 {
     public void run() {
         Storage<Integer> storage1 = new Storage<>(ConsoleUtil.readIntegerMayBeNull());
         printValue(storage1, 0);

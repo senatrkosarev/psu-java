@@ -1,7 +1,5 @@
 package com.skosarev.lab02.part3.task3;
 
-import com.skosarev.common.interfaces.RunnableTask;
-
 import java.util.List;
 
 public class Task3 implements RunnableTask {

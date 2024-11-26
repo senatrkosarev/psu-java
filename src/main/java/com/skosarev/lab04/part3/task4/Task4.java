@@ -1,6 +1,5 @@
 package com.skosarev.lab04.part3.task4;
 
-import com.skosarev.common.interfaces.RunnableTask;
 import com.skosarev.lab04.part3.task4.listcreation.ListCreationWay;
 import com.skosarev.lab04.part3.task4.listcreation.StringLengthCreationWay;
 import com.skosarev.lab04.part3.task4.listcreation.TwoSublistsCreationWay;
@@ -13,9 +12,8 @@ import com.skosarev.lab04.part3.task4.transport.UniqueStringsTransportWay;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Task4 implements RunnableTask {
+public class Task4 {
 
-    @Override
     public void run() {
         List<Double> doubleData = List.of(1d, 2d, -3d, 4d);
         List<String> stringData1 = List.of("qwerty", "asdfg", "zx", "qw");

@@ -23,6 +23,25 @@ public class ConsoleUtil {
         }
     }
 
+    public static Integer readIntegerMayBeNull() {
+        while (true) {
+            try {
+                System.out.print(ENTER_INT_DEFAULT_MESSAGE);
+                String line = readLine();
+                if (line.isBlank()){
+                    return null;
+                }
+                int num = Integer.parseInt(line);
+
+                return num;
+            } catch (NumberFormatException e) {
+                System.out.println("Введено некорретное число.");
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
     public static int readInteger() {
         return readInteger(ENTER_INT_DEFAULT_MESSAGE);
     }

@@ -1,8 +1,8 @@
 package com.skosarev.lab02.part1.task1;
 
 public class Point {
-    private long x;
-    private long y;
+    protected long x;
+    protected long y;
 
     public Point(long x, long y) {
         this.x = x;

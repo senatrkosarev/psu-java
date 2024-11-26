@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+// Возвращает столько списков, сколько уникальных строк есть в исходном списке
 public class UniqueStringsCreationWay implements ListCreationWay<String> {
     @Override
     public List<List<String>> createList(List<String> list) {

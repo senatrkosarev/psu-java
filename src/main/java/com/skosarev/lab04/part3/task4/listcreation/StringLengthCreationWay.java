@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+// Ищет строку с максимальной длиной, возвращает количество списков = этой длине
 public class StringLengthCreationWay implements ListCreationWay<String> {
     @Override
     public List<List<String>> createList(List<String> list) {

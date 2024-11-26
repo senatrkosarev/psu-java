@@ -1,8 +1,7 @@
 package com.skosarev.lab04.part3.task4.transport;
 
-import java.util.List;
 
-
+// Общий интерфейс для всех Способов передачи значений исходного списка в результирующую коллекцию
 public interface TransportWay<T> {
     Integer transport(T element);
 }

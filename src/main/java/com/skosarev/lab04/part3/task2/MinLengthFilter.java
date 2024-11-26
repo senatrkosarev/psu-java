@@ -7,6 +7,7 @@ public class MinLengthFilter implements Filter<String> {
         this.minLength = minLength;
     }
 
+    // Длина строки должна быть больше или равна значению, переданному в конструктор при создании
     @Override
     public boolean test(String s) {
         return s.length() < minLength;

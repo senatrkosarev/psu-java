@@ -13,6 +13,7 @@ public class Task3 implements RunnableTask {
         printValue(box);
     }
 
+    // Конструкция Box<? super Point3D>, чтобы можно было параметризовать и с помощью Point, и Point3D
     private void test(Box<? super Point3D> box) {
         box.put(new Point3D(1,2, 3));
     }

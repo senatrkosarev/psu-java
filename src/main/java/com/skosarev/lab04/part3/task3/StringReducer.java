@@ -3,6 +3,8 @@ package com.skosarev.lab04.part3.task3;
 import java.util.List;
 
 public class StringReducer implements Reducer<String, String> {
+
+    // Склеивает все строки в списке и возвращает результат
     @Override
     public String reduce(List<String> list) {
         StringBuilder sb = new StringBuilder();

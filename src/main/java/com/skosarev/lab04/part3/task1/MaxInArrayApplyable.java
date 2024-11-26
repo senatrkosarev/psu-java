@@ -1,7 +1,8 @@
 package com.skosarev.lab04.part3.task1;
 
 
-public class MaxInArray implements Applyable<int[], Integer> {
+public class MaxInArrayApplyable implements Applyable<int[], Integer> {
+    // Ищет максимум в массиве чисел
     @Override
     public Integer apply(int[] arr) {
         if (arr.length == 0) {

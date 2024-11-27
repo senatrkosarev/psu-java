@@ -1,5 +1,7 @@
 package com.skosarev;
 
+import com.skosarev.lab02.part1.task1.Point;
+import com.skosarev.lab03.part3.task5.Point3D;
 import com.skosarev.lab04.part1.task1.Box;
 import com.skosarev.lab04.part1.task2.Storage;
 import com.skosarev.lab04.part3.task1.AbsApplyable;
@@ -278,34 +280,4 @@ public class Main {
         }
     }
 
-    // Точка (Из лаб-2 - задание 1.1)
-    static class Point {
-        protected final long x;
-        protected final long y;
-
-        public Point(long x, long y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        @Override
-        public String toString() {
-            return "{%d;%d}".formatted(this.x, this.y);
-        }
-    }
-
-    // Точка в пространстве (Из лаб-3 - задание 3.5)
-    public static class Point3D extends Point {
-        private final long z;
-
-        public Point3D(long x, long y, long z) {
-            super(x, y);
-            this.z = z;
-        }
-
-        @Override
-        public String toString() {
-            return "{%d;%d;%d}".formatted(this.x, this.y, this.z);
-        }
-    }
 }

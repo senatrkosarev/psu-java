@@ -1,11 +1,11 @@
 package com.skosarev;
 
 import com.skosarev.common.interfaces.RunnableTask;
-import com.skosarev.lab04.part3.task4.Task4;
+import com.skosarev.lab06.part3.task1.Task1;
 
 public class Main {
     public static void main(String[] args) {
-        RunnableTask task = new Task4();
+        RunnableTask task = new Task1();
         task.run();
     }
 }

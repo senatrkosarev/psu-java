@@ -11,6 +11,3 @@ public @interface ToString {
     ToStringValue value() default ToStringValue.YES;
 }
 
-enum ToStringValue {
-    YES, NO
-}

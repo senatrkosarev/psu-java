@@ -15,32 +15,32 @@ public class ValidatorV2Test {
     @Test
     @DisplayName("Тест на успешную валидацию")
     public void testValidateSuccessful() {
-        // Создаем объект User с корректными данными
-        HumanV2 validUser = new HumanV2("JohnDoe", 25);
+        // Создаем объект Human с корректными данными
+        HumanV2 validHuman = new HumanV2("JohnDoe", 25);
 
         // Проверяем, что метод validate не выбрасывает исключение
-        assertDoesNotThrow(() -> validator.validate(validUser));
+        assertDoesNotThrow(() -> validator.validate(validHuman));
     }
 
     @Test
     @DisplayName("Тест на неуспешную валидацию (пустое имя пользователя)")
-    public void testValidateUsernameEmpty() {
-        // Создаем объект User с пустым именем пользователя
-        HumanV2 invalidUser = new HumanV2("", 25);
+    public void testValidateNameEmpty() {
+        // Создаем объект Human с пустым именем пользователя
+        HumanV2 invalidHuman = new HumanV2("", 25);
 
         // Проверяем, что метод validate выбрасывает исключение с ожидаемым сообщением
-        ValidationException exception = assertThrows(ValidationException.class, () -> validator.validate(invalidUser));
+        ValidationException exception = assertThrows(ValidationException.class, () -> validator.validate(invalidHuman));
         assertTrue(exception.getMessage().contains("не прошёл валидацию на методе: testName"));
     }
 
     @Test
     @DisplayName("Тест на неуспешную валидацию (некорректный возраст)")
     public void testValidateAgeInvalid() {
-        // Создаем объект User с некорректным возрастом
-        HumanV2 invalidUser = new HumanV2("JohnDoe", -1);
+        // Создаем объект Human с некорректным возрастом
+        HumanV2 invalidHuman = new HumanV2("Ivan", -1);
 
         // Проверяем, что метод validate выбрасывает исключение с ожидаемым сообщением
-        ValidationException exception = assertThrows(ValidationException.class, () -> validator.validate(invalidUser));
+        ValidationException exception = assertThrows(ValidationException.class, () -> validator.validate(invalidHuman));
         assertTrue(exception.getMessage().contains("не прошёл валидацию на методе: testAge"));
     }
 }

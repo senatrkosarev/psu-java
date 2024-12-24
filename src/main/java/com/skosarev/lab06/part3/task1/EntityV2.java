@@ -11,7 +11,7 @@ public abstract class EntityV2 {
 
     @Override
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder(this.getClass().getSimpleName() + "{");
+        StringBuilder sb = new StringBuilder(this.getClass().getSimpleName() + "{");
         Map<String, String> fieldMap = new HashMap<>();
 
         // Получаем класс текущего объекта
@@ -54,15 +54,18 @@ public abstract class EntityV2 {
 
         // Формируем строку в формате "ключ=значение"
         for (Map.Entry<String, String> entry : fieldMap.entrySet()) {
-            stringBuilder.append(entry.getKey()).append("=").append(entry.getValue()).append(", ");
+            sb.append(entry.getKey()).append("=").append(entry.getValue()).append(", ");
         }
 
         // Удаляем последнюю запятую и пробел, если они есть
-        if (!stringBuilder.isEmpty()) {
-            stringBuilder.setLength(stringBuilder.length() - 2);
+        if (sb.charAt(sb.length() - 1) == ' ') {
+            sb.setLength(sb.length() - 1);
+        }
+        if (sb.charAt(sb.length() - 1) == ',') {
+            sb.setLength(sb.length() - 1);
         }
 
-        return stringBuilder.append("}").toString();
+        return sb.append("}").toString();
     }
 }
 

@@ -11,5 +11,5 @@ public class AV2 extends EntityV2 {
     int x = 42; // По умолчанию YES, так как не помечено
 
     @ToString(ToStringValue.NO)
-    String hidden = "This will not be shown";
+    String hidden = "Скрытый текст";
 }
